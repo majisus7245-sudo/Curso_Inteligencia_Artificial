@@ -1,0 +1,15 @@
+Para esta tabla comparativa se uso la siguiente sucesion de numeros: 
+5 2 4 
+  8 3 
+1 6 7 
+
+| Algoritmo                | Profundidad de Meta | Nodos Procesados | Nodos Generados | Espacio Máx. (Memoria) | Tiempo Real (s) |
+|:------------------------:|:-------------------:|:----------------:|:---------------:|:----------------------:|:---------------:|
+| Anchura (BFS)            | 19                  | 29,661           | 43,811          | 57,961                 | 0.143           |
+| Profundidad (DFS)        | 3201                | 3,543            | 6,376           | 9,209                  | 0.020           |
+| Costo Uniforme (UCS)     | 19                  | 30,339           | 44,557          | 58,775                 | 0.109           |
+| Iterativa Limitada (IDS) | 31                  | 277,900          | 277,917         | 55,117                 | 0.315           |
+
+Notas adicionales sobre los resultados:
+- Costo Uniforme (UCS): Reportó un costo final de la solución de 19.
+- Iterativa Limitada (IDS): El límite de profundidad exacto donde se encontró la meta fue 31.

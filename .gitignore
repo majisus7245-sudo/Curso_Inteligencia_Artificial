@@ -5,3 +5,6 @@ __pycache__/
 # Deteccion de rostros (fotos personales, no se suben)
 code/06_dataset_rostros/
 code/08_cnn_rostros/
+
+# Documentacion local
+README.md

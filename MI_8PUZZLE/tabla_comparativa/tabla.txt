@@ -10,7 +10,6 @@ Estado meta:
 
 1. RESULTADOS EXPERIMENTALES
 
-
 | Algoritmo                | Profundidad de Meta | Nodos Procesados | Nodos Generados | Espacio Máx. (Memoria) | Tiempo Real (s) |
 |:------------------------:|:-------------------:|:----------------:|:---------------:|:----------------------:|:---------------:|
 | Anchura (BFS)            | 19                  | 29,661           | 43,811          | 57,961                 | 0.111           |
@@ -32,7 +31,7 @@ Notas adicionales sobre los resultados:
 2. TABLA COMPARATIVA DE COMPLEJIDAD ALGORITMICA
 
 Notacion:
-  b = factor de ramificacion (maximo de sucesores por nodo; en el 8-puzzle b <= 4, promedio ~2.67)
+  b = factor de ramificacion (maximo de sucesores por nodo; en el 8-puzzle b <= 4, pmroedio ~2.67)
   d = profundidad de la solucion mas superficial (aqui d = 19)
   m = profundidad maxima del arbol de busqueda (puede ser muy grande o infinita)
   l = limite de profundidad

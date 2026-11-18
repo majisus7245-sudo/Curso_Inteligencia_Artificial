@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class Pila <T> {
 	private T [] pila;
 	private int tope, tamañoMaximo;

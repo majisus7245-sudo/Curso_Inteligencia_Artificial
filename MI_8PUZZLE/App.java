@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class App {
     public static void main(String[] args) {
         
@@ -15,6 +13,7 @@ public class App {
         searchTree.DFS();
         searchTree.costoUniforme();
         searchTree.busquedaIterativa();
+        searchTree.busquedaBidireccional();
     }
     
 }

@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class Utils {
     
     public static void formatState(String state){

@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 import java.io.Serializable;
 
 public class Cola <T> implements Serializable {

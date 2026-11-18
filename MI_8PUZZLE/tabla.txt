@@ -1,0 +1,63 @@
+Para esta tabla comparativa se uso la siguiente sucesion de numeros: 
+5 2 4 
+  8 3 
+1 6 7 
+
+Estado meta:
+1 2 3
+4 5 6
+7 8  
+
+1. RESULTADOS EXPERIMENTALES
+
+
+| Algoritmo                | Profundidad de Meta | Nodos Procesados | Nodos Generados | Espacio Máx. (Memoria) | Tiempo Real (s) |
+|:------------------------:|:-------------------:|:----------------:|:---------------:|:----------------------:|:---------------:|
+| Anchura (BFS)            | 19                  | 29,661           | 43,811          | 57,961                 | 0.111           |
+| Profundidad (DFS)        | 3201                | 3,543            | 6,376           | 9,209                  | 0.012           |
+| Costo Uniforme (UCS)     | 19                  | 30,339           | 44,557          | 58,775                 | 0.103           |
+| Iterativa Limitada (IDS) | 19                  | 162,034          | 162,043         | 41,285                 | 0.195           |
+| Bidireccional            | 19                  | 711              | 1,199           | 1,686                  | 0.002           |
+
+Notas adicionales sobre los resultados:
+- Costo Uniforme (UCS): Reportó un costo final de la solución de 19 (cada movimiento cuesta 1,
+  por eso se comporta igual que BFS).
+- Iterativa Limitada (IDS): El límite de profundidad exacto donde se encontró la meta fue 19.
+  (Antes reportaba 31 porque el conjunto de visitados descartaba estados que despues se
+  alcanzaban por un camino mas corto; se corrigio guardando la profundidad de cada estado.)
+- Profundidad (DFS): Encuentra una solucion rapido, pero de profundidad 3201: NO es optima.
+- Bidireccional: Visitó 493 nodos desde el inicio y 706 desde la meta. Al buscar desde los dos
+  extremos cada lado solo baja ~d/2 niveles, por eso procesa ~40 veces menos nodos que BFS.
+
+2. TABLA COMPARATIVA DE COMPLEJIDAD ALGORITMICA
+
+Notacion:
+  b = factor de ramificacion (maximo de sucesores por nodo; en el 8-puzzle b <= 4, promedio ~2.67)
+  d = profundidad de la solucion mas superficial (aqui d = 19)
+  m = profundidad maxima del arbol de busqueda (puede ser muy grande o infinita)
+  l = limite de profundidad
+  C* = costo de la solucion optima
+  e = costo minimo de una accion (e > 0)
+
+| Algoritmo                | Tiempo              | Espacio (Memoria)   | ¿Completo?          | ¿Optimo?              |
+|:------------------------:|:-------------------:|:-------------------:|:-------------------:|:---------------------:|
+| Anchura (BFS)            | O(b^d)              | O(b^d)              | Si (si b es finito) | Si (costos iguales)   |
+| Profundidad (DFS)        | O(b^m)              | O(b·m)              | No (puede ciclar)   | No                    |
+| Costo Uniforme (UCS)     | O(b^(1+⌊C*/e⌋))     | O(b^(1+⌊C*/e⌋))     | Si (si e > 0)       | Si                    |
+| Profundidad Limitada     | O(b^l)              | O(b·l)              | No (si l < d)       | No                    |
+| Iterativa (IDS)          | O(b^d)              | O(b·d)              | Si                  | Si (costos iguales)   |
+| Bidireccional            | O(b^(d/2))          | O(b^(d/2))          | Si (con BFS)        | Si (costos iguales)   |
+
+Observaciones:
+- BFS y UCS garantizan la solucion optima pero guardan toda la frontera en memoria (O(b^d)),
+  lo que es su principal limitacion.
+- DFS usa muy poca memoria (O(b·m)) pero no garantiza encontrar la solucion mas corta;
+  en este experimento llego a profundidad 3201 cuando la optima era 19.
+- IDS combina lo mejor de ambos: memoria lineal como DFS y optimalidad como BFS. Repite
+  trabajo en los niveles superiores, pero como la mayoria de nodos estan en el ultimo nivel,
+  el tiempo sigue siendo O(b^d).
+- Bidireccional reduce el exponente a la mitad: 2·b^(d/2) es mucho menor que b^(d/2 + d/2) = b^d.
+  Requiere conocer el estado meta y poder generar predecesores (en el 8-puzzle los
+  movimientos son reversibles, asi que los sucesores sirven como predecesores).
+- En la practica se usa un conjunto de visitados (busqueda en grafo), por lo que el espacio de
+  BFS/UCS/IDS tambien queda acotado por el numero de estados alcanzables del 8-puzzle (9!/2 = 181,440).

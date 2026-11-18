@@ -14,6 +14,17 @@ X_scaled = scaler.fit_transform(X_celsius)
 regressor = SGDRegressor(max_iter=1000, tol=1e-3, learning_rate='invscaling', eta0=0.01, random_state=42)
 regressor.fit(X_scaled, y_fahrenheit)
 
+# 4. Probar predicciones de valores continuos
+test_celsius = np.array([15, 25, 37]).reshape(-1, 1)
+test_scaled = scaler.transform(test_celsius)
+predictions = regressor.predict(test_scaled)
+
+print("\n--- RESULTADOS REGRESIÓN (NEURONA LINEAL) ---")
+for c, f_pred in zip(test_celsius.ravel(), predictions):
+    f_real = c * 1.8 + 32
+    print(f"{c}°C -> Predicho por la neurona: {f_pred:.2f}°F | Real: {f_real:.2f}°F")
+
+
 # ==========================================
 # 4. Obtener W y Bias del modelo (Escalados)
 # ==========================================

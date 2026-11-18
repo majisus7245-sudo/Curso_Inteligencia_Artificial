@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class Lista <T> {
 	
 	private Nodo<T> frente;

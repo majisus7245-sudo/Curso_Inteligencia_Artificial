@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class NodoPuzzle {
     private String state;
     private NodoPuzzle parent;

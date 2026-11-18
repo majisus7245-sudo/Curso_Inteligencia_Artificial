@@ -1,5 +1,3 @@
-package com.ejemplo;
-
 public class Nodo <T>{
 	private T Info;
 	private Nodo<T> sig;

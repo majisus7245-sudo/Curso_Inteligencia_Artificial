@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.vscode/
+
+# Deteccion de rostros (fotos personales, no se suben)
+code/06_dataset_rostros/
+code/08_cnn_rostros/

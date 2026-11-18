@@ -1,0 +1,45 @@
+Imágenes de prueba para el tutorial de CNN (CIFAR-10)
+Todas provienen de Wikimedia Commons. Conservan su licencia original;
+al compartirlas, incluye atribución y enlace a la página de cada archivo.
+
+=== gato.jpg ===
+Archivo Commons: File:Cat November 2010-1a.jpg
+Página: https://commons.wikimedia.org/wiki/File:Cat_November_2010-1a.jpg
+Licencia: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0
+Autor: Alvesgaspar
+Tamaño original: 1795×2397; guardado: 599×800
+
+=== perro.jpg ===
+Archivo Commons: File:YellowLabradorLooking new.jpg
+Página: https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg
+Licencia: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0
+Autor: obra derivada de Djmirko a partir de File:YellowLabradorLooking.jpg (foto original atribuida a Elf)
+Tamaño original: 700×577; guardado: 700×577
+
+=== avion.jpg ===
+Archivo Commons: File:Lufthansa Airbus A320-211 D-AIQT 01.jpg
+Página: https://commons.wikimedia.org/wiki/File:Lufthansa_Airbus_A320-211_D-AIQT_01.jpg
+Licencia: CC BY 4.0  https://creativecommons.org/licenses/by/4.0
+Autor: Julian Herzog (https://julianherzog.com)
+Tamaño original: 2900×1631; guardado: 800×450
+
+=== auto.jpg ===
+Archivo Commons: File:2018 Toyota Corolla (ZRE172R) Ascent sedan (2018-11-02) 02.jpg
+Página: https://commons.wikimedia.org/wiki/File:2018_Toyota_Corolla_(ZRE172R)_Ascent_sedan_(2018-11-02)_02.jpg
+Licencia: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0
+Autor: EurovisionNim
+Tamaño original: 3745×1925; guardado: 800×410
+
+=== barco.jpg ===
+Archivo Commons: File:0618 MSC Virtuosa in Geirangerfjord close-up V-P.jpg
+Página: https://commons.wikimedia.org/wiki/File:0618_MSC_Virtuosa_in_Geirangerfjord_close-up_V-P.jpg
+Licencia: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0
+Autor: Virtual-Pano
+Tamaño original: 7431×4956; guardado: 800×533
+
+=== caballo.jpg ===
+Archivo Commons: File:Piebald horse in the Cotswolds.jpg
+Página: https://commons.wikimedia.org/wiki/File:Piebald_horse_in_the_Cotswolds.jpg
+Licencia: CC BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0
+Autor: Saffron Blaze
+Tamaño original: 2926×2341; guardado: 800×640

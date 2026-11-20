@@ -1,23 +1,3 @@
-"""
-Tarea 8 - Reconocimiento de rostros en tiempo real.
-
-Basado en el EnTiempoReal.py compartido por el profesor:
-  1. Lee la webcam con OpenCV.
-  2. DETECCIÓN PREVIA: un detector Haar Cascade encuentra los rostros y se recorta
-     cada uno (la región de interés, ROI).
-  3. INFERENCIA: cada rostro se pasa a la CNN entrenada (modelo_propia.keras o
-     modelo_mobilenet.keras, según la variable MODELO).
-  4. Se dibuja la caja (bounding box) con el nombre predicho y el % de confianza.
-     Si la confianza es baja se muestra "Desconocido".
-
-Requiere haber corrido antes entrenar_propia.py o entrenar_mobilenet.py.
-
-Controles:  Q o ESC -> salir
-
-Ejecutar desde esta carpeta:
-   ..\\..\\.venv\\Scripts\\python.exe en_tiempo_real.py
-"""
-
 import json
 import os
 import time
@@ -31,7 +11,7 @@ import tensorflow as tf
 # ----------------------------------------------------------------------
 # Configuración
 # ----------------------------------------------------------------------
-MODELO = "mobilenet"            # "propia" o "mobilenet": cuál modelo entrenado usar
+MODELO = "mobilenet"
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARCHIVO_MODELO = os.path.join(AQUI, f"modelo_{MODELO}.keras")
@@ -138,7 +118,7 @@ def main():
             cv2.putText(frame, f"FPS: {fps:.1f}", (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.7,
                         (255, 255, 255), 2, cv2.LINE_AA)
 
-            cv2.imshow("Reconocimiento Facial - CNN", frame)
+            cv2.imshow("Reconocimiento Facial - MobileNetV2", frame)
             if cv2.waitKey(1) & 0xFF in (ord("q"), 27):
                 break
     finally:

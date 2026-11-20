@@ -2,7 +2,4 @@ __pycache__/
 *.pyc
 .vscode/
 
-code/06_dataset_rostros/
-code/08_cnn_rostros/
-
 README.md

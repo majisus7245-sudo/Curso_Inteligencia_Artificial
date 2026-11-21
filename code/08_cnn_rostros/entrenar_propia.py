@@ -1,12 +1,3 @@
-"""
-Tarea 8 - Entrenamiento de una CNN DESDE CERO para clasificar rostros.
-
-Genera:  modelo_propia.keras, clases_propia.json, curvas_propia.png
-
-Ejecutar desde esta carpeta:
-   ..\\..\\.venv\\Scripts\\python.exe entrenar_propia.py
-"""
-
 import json
 import os
 
@@ -54,12 +45,13 @@ for c, n, p in zip(clases, conteos, pesos_clase.values()):
 # ----------------------------------------------------------------------
 # Data Augmentation (solo actúa al entrenar)
 aumento = models.Sequential([
-    layers.RandomFlip("horizontal"),
-    layers.RandomRotation(0.08),
-    layers.RandomZoom(0.15),
-    layers.RandomBrightness(0.2),
-    layers.RandomContrast(0.2),
-], name="aumento_de_datos")
+    # Se agrupan las transformaciones en una secuencia y solo se aplican durante el entrenamiento.
+    layers.RandomFlip("horizontal"),       # Invierte algunas imágenes horizontalmente.
+    layers.RandomRotation(0.08),           # Rota aleatoriamente hasta ±28.8 grados.
+    layers.RandomZoom(0.15),               # Aplica acercamiento o alejamiento de hasta 15 %.
+    layers.RandomBrightness(0.2),          # Modifica aleatoriamente el brillo hasta 20 %.
+    layers.RandomContrast(0.2),            # Modifica aleatoriamente el contraste hasta 20 %.
+], name="aumento_de_datos")                # Asigna un nombre identificable al bloque de aumento.
 
 
 def bloque_conv(x, filtros):

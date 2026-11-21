@@ -1,22 +1,3 @@
-"""
-Tarea 8 - Reconocimiento de rostros en tiempo real con CNN propia.
-
-Basado en el EnTiempoReal.py compartido por el profesor:
-  1. Lee la webcam con OpenCV.
-  2. DETECCIÓN PREVIA: un detector Haar Cascade encuentra los rostros y se recorta
-     cada uno (la región de interés, ROI).
-  3. INFERENCIA: cada rostro se pasa al modelo CNN propia (modelo_propia.keras).
-  4. Se dibuja la caja (bounding box) con el nombre predicho y el % de confianza.
-     Si la confianza es baja se muestra "Desconocido".
-
-Requiere haber corrido antes entrenar_propia.py.
-
-Controles:  Q o ESC -> salir
-
-Ejecutar desde esta carpeta:
-   ..\\..\\.venv\\Scripts\\python.exe en_tiempo_real_propia.py
-"""
-
 import json
 import os
 import time
